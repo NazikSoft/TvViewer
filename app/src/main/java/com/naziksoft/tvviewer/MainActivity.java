@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.naziksoft.tvviewer.entity.ServerResponse;
 import com.naziksoft.tvviewer.entity.TvCanal;
 
 import java.util.ArrayList;
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements CanalsPresenter.P
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
-            case AppConstants.PERMISSIONS_REQUEST_PHONE_STATE: {
+            case PERMISSIONS_REQUEST_PHONE_STATE: {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission was granted
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements CanalsPresenter.P
     private void checkPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             // Permission is not granted
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, AppConstants.PERMISSIONS_REQUEST_PHONE_STATE);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, PERMISSIONS_REQUEST_PHONE_STATE);
         } else {
             // Permission has already been granted
             initPresenter();
