@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TvViewer</string>
+    <string name="internet_connection_error">Отсутствует интернет соединение.</string>
+    <string name="request_connection_error">Ошибка запроса. Попробуйте снова.</string>
+    <string name="toast_permission_deny">Без разрешения дальнейшее использование программы невозможно.</string>
+    <string name="message_all_list_loaded">Загружен ввесь список</string>
+</resources>
